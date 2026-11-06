@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №4</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <style>
+        footer {
+            text-align: center;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/avatar2.jpg"
+                 alt="портрет Бенсона Льва"
+                 width="200"
+                 height="200">
+
+            <h1>Бенсон Лев Глебович</h1>
+
+            <p>Волонтёр и социальный активист</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="#skills">Навыки</a>
+        <a href="#projects">Проекты</a>
+        <a href="#actions">Текущие акции</a>
+        <a href="#roles">Роли в команде</a>
+        <a href="#feedback">Обратная связь</a>
+    </nav>
+
+    <div class="dom-controls">
+        <button type="button" id="theme-button">
+            Переключить тему
+        </button>
+
+        <button type="button" id="add-action-button">
+            Добавить акцию
+        </button>
+
+        <button type="button" id="hide-actions-button">
+            Скрыть акции
+        </button>
+    </div>
+
+    <main>
+
+        <section style="margin-bottom: 20px;" id="skills">
+            <h2>Навыки</h2>
+
+            <ul>
+                <li>
+                    <strong>Координация волонтеров</strong> -
+                    управление командами от 5 до 50 человек
+                </li>
+
+                <li>
+                    <strong>Фандрайзинг</strong> -
+                    привлечение средств для социальных инициатив
+                </li>
+
+                <li>
+                    <strong>Работа с НКО</strong> -
+                    партнерство, отчетность и грантовые заявки
+                </li>
+
+                <li>
+                    <strong>Медиа-волонтерство</strong> -
+                    создание контента, ведение соцсетей
+                </li>
+
+                <li>
+                    <strong>Организация мероприятий</strong> -
+                    логистика, волонтерские смены
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="projects-section" id="projects">
+            <h2>Проекты</h2>
+
+            <ol>
+                <li>
+                    <strong>"Чистый берег"</strong> -
+                    экологическая акция по очистке побережья
+                </li>
+
+                <li>
+                    <strong>"Помощь рядом"</strong> -
+                    адресная помощь пожилым людям:
+                    доставка продуктов, лекарств, бытовая поддержка
+                </li>
+
+                <li>
+                    <strong>"Фестиваль добрых дел"</strong> -
+                    организация городского фестиваля НКО:
+                    10 мастер-классов, ярмарка, лекции
+                </li>
+
+                <li>
+                    <strong>"Книги в села"</strong> -
+                    сбор и передача книг в школьные библиотеки
+                    отдаленных районов
+                </li>
+            </ol>
+        </section>
+
+        <section id="actions">
+            <h2>Текущие акции</h2>
+
+            <div class="actions-container">
+                <article class="action-card">
+                    <h3>Чистый берег</h3>
+                    <p>
+                        <strong>Дата:</strong>
+                        <time datetime="2026-10-18">18 октября 2026</time>
+                    </p>
+                    <p><strong>Роль:</strong> Участник экологической акции</p>
+                </article>
+
+                <article class="action-card">
+                    <h3>Помощь рядом</h3>
+                    <p>
+                        <strong>Дата:</strong>
+                        <time datetime="2026-10-18">24 октября 2026</time>
+                    </p>
+                    <p><strong>Роль:</strong> Волонтёр-помощник</p>
+                </article>
+
+                <article class="action-card">
+                    <h3>Книги в сёла</h3>
+                    <p>
+                        <strong>Дата:</strong>
+                        <time datetime="2026-10-18">31 октября 2026</time>
+                    </p>
+                    <p><strong>Роль:</strong> Организатор сбора книг</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="roles">
+            <h2>Роли в команде</h2>
+
+            <div class="roles-grid">
+                <article class="role-card">
+                    <h3>Координатор 👥</h3>
+                    <p>Распределяет задачи и координирует работу волонтёров.</p>
+                </article>
+
+                <article class="role-card">
+                    <h3>Организатор 📋</h3>
+                    <p>Планирует мероприятия и отвечает за их проведение.</p>
+                </article>
+
+                <article class="role-card">
+                    <h3>Медиа-волонтёр 📢</h3>
+                    <p>Создаёт публикации и рассказывает о проектах.</p>
+                </article>
+
+                <article class="role-card">
+                    <h3>Эколог 🌱</h3>
+                    <p>Участвует в уборке территорий и защите природы.</p>
+                </article>
+
+                <article class="role-card">
+                    <h3>Помощник ❤️</h3>
+                    <p>Помогает пожилым людям и нуждающимся.</p>
+                </article>
+
+                <article class="role-card">
+                    <h3>Сборщик книг 📚</h3>
+                    <p>Организует сбор книг для школьных библиотек.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="feedback-section" id="feedback">
+            <h2>Обратная связь</h2>
+    
+            <form action="#" method="post">
+    
+                <div class="form-group">
+                    <label for="user-name">Ваше имя</label>
+    
+                    <input type="text"
+                           id="user-name"
+                           name="user-name"
+                           placeholder="Иван Петров"
+                           required>
+                </div>
+    
+    
+                <div class="form-group">
+                    <label for="user-email">Email</label>
+    
+                    <input type="email"
+                           id="user-email"
+                           name="user-email"
+                           placeholder="ivan@example.com"
+                           required>
+                </div>
+    
+    
+                <div class="form-group">
+                    <label for="user-message">Сообщение</label>
+    
+                    <textarea
+                        name="user-message"
+                        id="user-message"
+                        placeholder="Напишите, как вы хотите присоединиться к нашим проектам"
+                        rows="4"></textarea>
+                </div>
+    
+    
+                <button type="submit" class="btn-submit">
+                    Отправить
+                </button>
+    
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <aside>
+        <h2>Меня волнует</h2>
+
+        <p>
+            <span>Социальное одиночество пожилых людей</span>
+        </p>
+    </aside>
+
+
+    <footer>
+        <p>&copy; 2026 Все права защищены</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+:root {
+    --white: #ffffff;
+    --red: #b22222;
+    --dark: #222222;
+    --light-red: #fff5f5;
+    --border: #dddddd;
+    --font: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--dark);
+    background-color: var(--white);
+    margin: 20px;
+    position: relative;
+}
+
+h2 {
+    color: var(--dark);
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 5px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    border: 3px solid var(--red);
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--dark);
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navigation a:hover {
+    background-color: var(--red);
+}
+
+main {
+    background-color: #CD5C5C;
+    padding: 10px;
+}
+
+section {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    position: static;
+    background-color: var(--white);
+    margin-bottom: 20px;
+}
+
+aside {
+    float: right;
+    width: 200px;
+    max-width: 100%;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: var(--light-red);
+    border-left: 4px solid var(--red);
+}
+
+.actions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.action-card {
+    flex: 1 1 calc((100% - 40px) / 3);
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--light-red);
+    overflow-wrap: anywhere;
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.role-card {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--light-red);
+    overflow-wrap: anywhere;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 50%;
+    max-width: 100%;
+    padding: 8px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-family: var(--font);
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--red);
+    outline: none;
+    background-color: var(--light-red);
+}
+
+a:visited {
+    color: purple;
+}
+
+.navigation a:visited {
+    color: var(--white);
+}
+
+.btn-submit {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.btn-submit::after {
+    content: "❤";
+    color: var(--red);
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-submit:focus {
+    outline: 3px solid var(--red);
+    outline-offset: 4px;
+    box-shadow: 0 0 5px var(--red);
+}
+
+.btn-submit:hover {
+    background-color: var(--red);
+}
+
+.btn-submit:active {
+    transform: translateY(3px);
+}
+
+footer {
+    clear: both;
+    margin-top: 20px;
+    padding: 1.2rem 0.5rem;
+    background-color: var(--red);
+    color: var(--white);
+    border-top: 2px solid var(--dark);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .action-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .roles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    .actions-container {
+        flex-direction: row;
+    }
+
+    .action-card {
+        flex: 1 1 100%;
+    }
+
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-group {
+        margin: 20px 0;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+}
+
+.dom-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dom-controls button {
+    padding: 10px 18px;
+    background-color: var(--dark);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dom-controls button:hover {
+    background-color: var(--red);
+}
+
+.action-card button {
+    padding: 8px 12px;
+    margin: 5px 5px 0 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.action-card button:hover {
+    background-color: var(--red);
+}
+
+.hidden {
+    display: none !important;
+}
+
+body.dark-theme {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+body.dark-theme main {
+    background-color: #333333;
+}
+
+body.dark-theme section {
+    background-color: #2b2b2b;
+    border-color: #555555;
+}
+
+body.dark-theme h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .action-card,
+body.dark-theme .role-card {
+    background-color: #444444;
+    border-color: #666666;
+    color: #ffffff;
+}
+
+body.dark-theme aside {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-theme input,
+body.dark-theme textarea {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #777777;
+}
+
+body.dark-theme label {
+    color: #ffffff;
+}
+
+body.dark-theme .dom-controls button,
+body.dark-theme .action-card button {
+    background-color: #b22222;
+    color: #ffffff;
+}
+
+.action-card button.participated {
+    background-color: #228b22;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .dom-controls {
+        flex-direction: column;
+    }
+
+    .dom-controls button {
+        width: 100%;
+    }
+}
